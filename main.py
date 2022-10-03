@@ -1,10 +1,19 @@
+import os
 from cgitb import text
 from tkinter import *
 from tkinter import font
 
-
 root=Tk()
 root.title("Calculator")
+
+# Get Relative PATH
+def rcpath(rel_path):
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)),rel_path)
+# Adding Icon
+
+LOGO_PATH='images\calculator-icon.ico'
+root.iconbitmap(rcpath(LOGO_PATH))
+
 # Add Two Numbers
 def btnClick(number):
     curr=inputField.get()
