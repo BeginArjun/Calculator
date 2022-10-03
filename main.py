@@ -1,10 +1,10 @@
 import os
+from src import window
 from cgitb import text
 from tkinter import *
 from tkinter import font
 
-root=Tk()
-root.title("Calculator")
+root=window.window()
 
 # Get Relative PATH
 def rcpath(rel_path):
